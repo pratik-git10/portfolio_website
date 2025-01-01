@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+public/pratik_pund_resume_.pdf
+public/Pratik_Photograph.jpg
 
 # vercel
 .vercel
