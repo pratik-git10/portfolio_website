@@ -79,7 +79,7 @@ const ContactPage = (props: Props) => {
   };
 
   return (
-    <div className="mt-24 rounded-md mx-auto backdrop-blur-xl mb-24 max-w-xl">
+    <div className="mt-24 rounded-md mx-auto backdrop-blur-xl mb-28 max-w-xl ">
       <div className="flex flex-col justify-center items-center backdrop-blur-md bg-white/10 p-10 rounded-md mx-10 md:mx-20 shadow-sm shadow-gray-500">
         <h1 className="text-2xl">Contact Me</h1>
         <p className="text-muted-foreground">or you can reach me at</p>
@@ -104,6 +104,7 @@ const ContactPage = (props: Props) => {
               value={formData.name}
               onChange={handleChange}
               className="w-full p-2 rounded-md border"
+              placeholder="e.g name surname"
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.name}</p>
@@ -120,6 +121,7 @@ const ContactPage = (props: Props) => {
               value={formData.email}
               onChange={handleChange}
               className="w-full p-2 rounded-md border"
+              placeholder="test@mail.com"
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email}</p>
@@ -136,6 +138,7 @@ const ContactPage = (props: Props) => {
               value={formData.subject}
               onChange={handleChange}
               className="w-full p-2 rounded-md border"
+              placeholder="Subject"
             />
             {errors.subject && (
               <p className="text-red-500 text-sm">{errors.subject}</p>
@@ -152,6 +155,7 @@ const ContactPage = (props: Props) => {
               onChange={handleChange}
               className="w-full p-2 rounded-md border bg-white/5 outline-none"
               rows={4}
+              placeholder="Write message..."
             />
             {errors.message && (
               <p className="text-red-500 text-sm">{errors.message}</p>

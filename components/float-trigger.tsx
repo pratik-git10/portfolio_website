@@ -1,6 +1,7 @@
 "use client";
 
-import { Component, Contact2Icon, FolderOpenDot, HomeIcon } from "lucide-react";
+import { IconBrandHtml5 } from "@tabler/icons-react";
+import { Contact2Icon, FolderOpenDot, HomeIcon } from "lucide-react";
 import {
   AnimatePresence,
   motion,
@@ -40,9 +41,9 @@ const FloatingdockCore = () => {
     },
 
     {
-      title: "Components",
-      icon: <Component className="h-full w-full text-black" />,
-      href: "/components",
+      title: "Skills",
+      icon: <IconBrandHtml5 className="h-full w-full text-black" />,
+      href: "/skills",
     },
 
     {
@@ -58,7 +59,7 @@ const FloatingdockCore = () => {
     <motion.div
       onMouseMove={(e: any) => mouseHandlerX.set(e.pageX)}
       onMouseLeave={(e: any) => mouseHandlerX.set(Infinity)}
-      className="fixed bottom-3 inset-x-0 mx-auto gap-9 flex justify-center items-center h-16 bg-neutral-700 rounded-xl w-fit px-4 bg-white/10 p-4 shadow-md shadow-white/10 backdrop-blur-2xl"
+      className="fixed bottom-5 inset-x-0 mx-auto gap-9 flex justify-center items-center h-16 bg-neutral-700 rounded-xl w-fit px-4 bg-white/10 p-4 shadow-md shadow-white/10 backdrop-blur-2xl"
     >
       {links.map((el, idx) => (
         <IconContainer mouseHandlerX={mouseHandlerX} el={el} key={el.title} />

@@ -18,7 +18,6 @@ This is my **Portfolio Website**, where I showcase my projects, skills, and prof
 
 ### Frontend
 
-- HTML5
 - Tailwind CSS
 - JavaScript
 - NextJs
@@ -36,9 +35,3 @@ This is my **Portfolio Website**, where I showcase my projects, skills, and prof
 - Integrate analytics to track visitor interactions.
 
 ---
-
-## Contact
-
-Feel free to reach out if you have any questions or suggestions:
-
-- Email: [pratikpp2302@gmail.com](mailto:pratikpp2302@gmail.com)
