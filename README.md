@@ -33,5 +33,3 @@ This is my **Portfolio Website**, where I showcase my projects, skills, and prof
 - Include a dark mode toggle.
 - Optimize for faster loading times.
 - Integrate analytics to track visitor interactions.
-
----

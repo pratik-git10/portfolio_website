@@ -39,7 +39,6 @@ const FloatingdockCore = () => {
       icon: <FolderOpenDot className="h-full w-full text-black" />,
       href: "/products",
     },
-
     {
       title: "Skills",
       icon: <IconBrandHtml5 className="h-full w-full text-black" />,

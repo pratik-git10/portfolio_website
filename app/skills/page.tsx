@@ -1,43 +1,12 @@
-// import React from "react";
-// import { IconBrandNextjs, IconBrandNodejs } from "@tabler/icons-react";
-// type Props = {};
-
-// const ComponentsPage = (props: Props) => {
-//   return (
-//     <div className="bg--500 flex flex-col justify-center items-center mt-24 max-w-3xl mx-auto">
-//       <h1 className="font-bold">Skills</h1>
-//       <div className="justify-center items-center flex">
-//         <div className="bg--500 rounded-md gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4 p-3">
-//           {/* iconsgrid */}
-
-//           <div className="bg-slate-500 w-20 h-20 rounded-md flex justify-center items-center">
-//             <IconBrandNextjs stroke={2} className="text-black h-10 w-10" />
-//           </div>
-//           <div className="bg-slate-500 w-20 h-20 rounded-md flex justify-center items-center">
-//             <IconBrandNodejs stroke={2} className="text-green-500 h-10 w-10" />
-//           </div>
-//           <div className="bg-slate-500 w-20 h-20 rounded-md flex justify-center items-center">
-//             <IconBrandNextjs stroke={2} className="text-black h-10 w-10" />
-//           </div>
-//           <div className="bg-slate-500 w-20 h-20 rounded-md flex justify-center items-center">
-//             <IconBrandNextjs stroke={2} className="text-black h-10 w-10" />
-//           </div>
-
-//           {/* end of iconsgrid */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ComponentsPage;
-
 import React from "react";
 import {
+  IconBrandCss3,
   IconBrandGit,
   IconBrandGithub,
+  IconBrandHtml5,
   IconBrandJavascript,
   IconBrandMongodb,
+  IconBrandMysql,
   IconBrandNextjs,
   IconBrandNodejs,
   IconBrandReact,
@@ -49,17 +18,24 @@ type Props = {};
 
 const ComponentsPage = (props: Props) => {
   const icons = [
-    { Icon: IconBrandReact, color: "text-blue-400" },
-    { Icon: IconBrandNextjs, color: "text-black" },
-    { Icon: IconBrandNodejs, color: "text-green-500" },
-    { Icon: IconBrandMongodb, color: "text-green-500" },
-    { Icon: IconBrandTailwind, color: "text-blue-300" },
-    { Icon: IconBrandJavascript, color: "text-yellow-300" },
-    { Icon: IconBrandTypescript, color: "text-blue-500" },
+    { Icon: IconBrandHtml5, color: "text-orange-500", title: "HTML" },
+    { Icon: IconBrandCss3, color: "text-blue-500", title: "CSS" },
+    { Icon: IconBrandReact, color: "text-blue-400", title: "Reatcjs" },
+    { Icon: IconBrandNextjs, color: "text-black", title: "Nextjs" },
+    { Icon: IconBrandNodejs, color: "text-green-500", title: "Nodejs" },
+    { Icon: IconBrandMongodb, color: "text-green-500", title: "Mongodb" },
+    { Icon: IconBrandTailwind, color: "text-blue-300", title: "Tailwind" },
+    {
+      Icon: IconBrandJavascript,
+      color: "text-yellow-300",
+      title: "JavaScript",
+    },
+    { Icon: IconBrandMysql, color: "text-blue-500", title: "MySql" },
   ];
+
   const toolIcons = [
-    { Icon: IconBrandGithub, color: "text-black" },
-    { Icon: IconBrandGit, color: "text-orange-600" },
+    { Icon: IconBrandGit, color: "text-orange-600", title: "Git" },
+    { Icon: IconBrandGithub, color: "text-black", title: "Github" },
   ];
 
   return (
@@ -67,15 +43,19 @@ const ComponentsPage = (props: Props) => {
       <h1 className="font-bold text-xl bg--400 px-36 py-1 shadow-2xl shadow-slate-500 rounded-md">
         Skills
       </h1>
-      <h1 className="font-bold text-xl mt-6 text-rose-800">Technology</h1>
+      <h1 className="font-bold text-xl mt-6 text-blue-800">Technology</h1>
       <div className="flex justify-center items-center w-full">
         <div className="bg--500 rounded-md gap-6 grid grid-cols-3 mt-4 p-3">
           {/* iconsgrid */}
-          {icons.map(({ Icon, color }, index) => (
+          {icons.map(({ Icon, color, title }, index) => (
             <div
               key={index}
-              className="bg-white/20 shadow-md shadow-black w-20 h-20 rounded-md flex justify-center items-center"
+              className="bg-white/20 shadow-md shadow-black w-20 h-20 rounded-md flex justify-center items-center relative group"
             >
+              <div className="absolute top-[-35px] opacity-0 transition-all duration-300 transform scale-95 group-hover:opacity-100 group-hover:scale-100 text-sm font-medium bg-gray-800 text-white py-1 px-2 rounded">
+                {title}
+              </div>
+
               <Icon stroke={1} className={`${color} h-10 w-10`} />
             </div>
           ))}
@@ -89,11 +69,15 @@ const ComponentsPage = (props: Props) => {
       <div className="justify-center items-center flex">
         <div className="bg--500 rounded-md gap-6 grid grid-cols-3 mt-4 p-3">
           {/* iconsgrid */}
-          {toolIcons.map(({ Icon, color }, index) => (
+          {toolIcons.map(({ Icon, color, title }, index) => (
             <div
               key={index}
-              className="bg-white/20 shadow-md shadow-black w-20 h-20 rounded-md flex justify-center items-center"
+              className="bg-white/20 shadow-md shadow-black w-20 h-20 rounded-md flex justify-center items-center relative group"
             >
+              <div className="absolute top-[-35px] opacity-0 transition-all duration-300 transform scale-95 group-hover:opacity-100 group-hover:scale-100 text-sm font-medium bg-gray-800 text-white py-1 px-2 rounded">
+                {title}
+              </div>
+
               <Icon stroke={1} className={`${color} h-10 w-10`} />
             </div>
           ))}
