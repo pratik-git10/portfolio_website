@@ -69,11 +69,11 @@ const ContactPage = (props: Props) => {
           formData
         );
 
-        toast("Form submitted successfully!");
+        toast.success("Form submitted successfully!");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } catch (error) {
         console.error("Error submitting form:", error);
-        toast("Failed to submit the form.");
+        toast.error("Failed to submit the form.");
       }
     }
   };
@@ -91,8 +91,7 @@ const ContactPage = (props: Props) => {
         </a>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 w-full max-w-md"
-        >
+          className="flex flex-col gap-4 w-full max-w-md">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">
               Name
@@ -163,8 +162,7 @@ const ContactPage = (props: Props) => {
           </div>
           <Button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-          >
+            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
             Submit
           </Button>
         </form>

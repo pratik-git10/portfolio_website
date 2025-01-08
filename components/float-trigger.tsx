@@ -58,8 +58,7 @@ const FloatingdockCore = () => {
     <motion.div
       onMouseMove={(e: any) => mouseHandlerX.set(e.pageX)}
       onMouseLeave={(e: any) => mouseHandlerX.set(Infinity)}
-      className="fixed bottom-5 inset-x-0 mx-auto gap-9 flex justify-center items-center h-16 bg-neutral-700 rounded-xl w-fit px-4 bg-white/10 p-4 shadow-md shadow-white/10 backdrop-blur-2xl"
-    >
+      className="fixed bottom-5 inset-x-0 mx-auto gap-9 flex justify-center items-center h-16 bg-neutral-700 rounded-xl w-fit px-4 bg-white/10 p-4 shadow-md shadow-white/10 backdrop-blur-2xl">
       {links.map((el, idx) => (
         <IconContainer mouseHandlerX={mouseHandlerX} el={el} key={el.title} />
       ))}
@@ -118,8 +117,7 @@ export const IconContainer = ({
     <Link
       href={el.href}
       onMouseEnter={() => setHoverd(true)}
-      onMouseLeave={() => setHoverd(false)}
-    >
+      onMouseLeave={() => setHoverd(false)}>
       <motion.div
         ref={ref}
         style={{
@@ -127,8 +125,7 @@ export const IconContainer = ({
           height: height,
         }}
         key={el.title}
-        className="flex relative items-center justify-center rounded-full bg-neutral-300  "
-      >
+        className="flex relative items-center justify-center rounded-full bg-neutral-300  ">
         <AnimatePresence>
           {hoverd && (
             <motion.div
@@ -146,8 +143,7 @@ export const IconContainer = ({
               transition={{
                 duration: 0.2,
               }}
-              className="absolute left-1/2 text-xs px-2 py-0.5 whitespace-pre-wrap -translate-x-1/2 -top-7 w-fit bg-neutral-100 rounded-md text-neutral-500"
-            >
+              className="absolute left-1/2 text-xs px-2 py-0.5 whitespace-pre-wrap -translate-x-1/2 -top-7 w-fit bg-neutral-100 rounded-md text-black">
               {el.title}
             </motion.div>
           )}
@@ -157,8 +153,7 @@ export const IconContainer = ({
           style={{
             width: widthIcon,
             height: heightIcon,
-          }}
-        >
+          }}>
           {el.icon}
         </motion.div>
       </motion.div>
