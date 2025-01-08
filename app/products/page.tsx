@@ -17,7 +17,7 @@ const ProductPage = (props: Props) => {
         />
 
         <ProjectSectionNew
-          description="This project is all about SaaS E-commerce. Its core functionalities include user login, admin dashboard, all API tracking then for client interface separate functionality. The technology stack utilized comprises Next.js, Clerk authentication all implemented with TypeScript."
+          description="This project is a replicate of Zoom website. Its core functionalities include user login, admin dashboard, creating personal meeting room, sharing room id. Also you can view recording. The technology stack utilized comprises Next.js, next authentication all implemented with TypeScript."
           link="https://zoom-clone-three-fawn.vercel.app/"
           linkLabel="Zoom"
           image="/zoom_img.jpg"
