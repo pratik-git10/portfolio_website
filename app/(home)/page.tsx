@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
+<<<<<<< HEAD
       <div className="mt-[88px] max-w-[500px] mx-auto px-4 mb-28">
         <div className="bg--800 bg--300 p-2 flex flex-col justify-start ">
           <h1 className="flex justify-center items-center text-2xl font-semibold mb-5 w-fit mx-auto p-1 rounded-md shadow-sm shadow-black text-stone-400">
@@ -31,6 +32,15 @@ export default function Home() {
               B. Tech. in Mechanical Engineering
             </p>
             <p className="text-neutral-400">2020-2024</p>
+=======
+      <div className="max-w-3xl mx-4 md:mx-auto">
+        <div className="mt-[88px] rounded-md bg--300 grid grid-cols-2 justify-center items-center h-auto p-2 mb-28">
+          <div className="mx-2 border h-auto p-2 bg--400 rounded-md">
+            Hey, I am Pratik Sanjayrao Pund.
+          </div>
+          <div className="mx-2 border h-auto p-2 bg--400 rounded-md">
+            
+>>>>>>> d9c85dc9001e0308ac7d651d47d6e9d8f6032a79
           </div>
         </div>
         <div className="p-2 mt-4 flex items-center">
