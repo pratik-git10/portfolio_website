@@ -16,9 +16,8 @@ import {
   IconBrandVscode,
 } from "@tabler/icons-react";
 import { Separator } from "@/components/ui/separator";
-type Props = {};
 
-const ComponentsPage = (props: Props) => {
+const ComponentsPage = () => {
   const icons = [
     { Icon: IconBrandHtml5, color: "text-orange-500", title: "HTML" },
     { Icon: IconBrandCss3, color: "text-blue-500", title: "CSS" },

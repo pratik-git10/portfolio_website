@@ -4,12 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import toast from "react-hot-toast";
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { MailIcon } from "lucide-react";
 
-type Props = {};
-
-const ContactPage = (props: Props) => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

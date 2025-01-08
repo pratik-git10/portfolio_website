@@ -2,9 +2,7 @@ import ProjectSection from "@/components/project-section";
 import ProjectSectionNew from "@/components/project-section-second";
 import React from "react";
 
-type Props = {};
-
-const ProductPage = (props: Props) => {
+const ProductPage = () => {
   return (
     <div>
       <div className="mt-24 max-w-xl md:max-w-3xl mx-auto md:mx:auto mb-28">

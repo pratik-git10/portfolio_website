@@ -15,7 +15,7 @@ const ProjectSectionNew = ({
   description,
   link,
   image,
-  linkLabel = "visit",
+
   githublink,
 }: Props) => {
   return (

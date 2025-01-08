@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { useClickOutside } from "@/hooks/useClickOutside";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import UserProfile from "./user-profile";
+// // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Button } from "@/components/ui/button";
+// import UserProfile from "./user-profile";
 import Image from "next/image";
 
 const Navlinks = [
@@ -20,10 +20,10 @@ const Navlinks = [
 ];
 
 const Navbar = () => {
-  const [showUserProfile, setShowUserProfile] = useState(false);
-  const profileRef = useClickOutside<HTMLDivElement>(() =>
-    setShowUserProfile(false)
-  );
+  // const [showUserProfile, setShowUserProfile] = useState(false);
+  // const profileRef = useClickOutside<HTMLDivElement>(() =>
+  //   setShowUserProfile(false)
+  // );
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 m-3">

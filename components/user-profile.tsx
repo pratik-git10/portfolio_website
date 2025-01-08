@@ -3,9 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-type Props = {};
-
-const UserProfile = (props: Props) => {
+const UserProfile = () => {
   const handleResumeClick = () => {
     const resumePath = "./pratik_pund_resume_.pdf";
 
@@ -33,8 +31,7 @@ const UserProfile = (props: Props) => {
         <Button
           variant="default"
           className="my-2 w-full border border-gray-500 text-base"
-          onClick={handleResumeClick}
-        >
+          onClick={handleResumeClick}>
           Resume
         </Button>
       </div>
@@ -42,8 +39,7 @@ const UserProfile = (props: Props) => {
         <Link
           href="https://github.com/pratik-git10"
           target="_blank"
-          className="w-full flex justify-center"
-        >
+          className="w-full flex justify-center">
           Github
         </Link>
       </div>
@@ -51,8 +47,7 @@ const UserProfile = (props: Props) => {
         <Link
           href="https://linkedin.com/in/pratik-pund-473168216"
           target="_blank"
-          className="w-full flex justify-center"
-        >
+          className="w-full flex justify-center">
           Linkedin
         </Link>
       </div>

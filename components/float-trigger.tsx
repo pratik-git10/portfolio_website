@@ -15,7 +15,7 @@ import { useRef, useState } from "react";
 
 type Link = {
   title: string;
-  icon: React.ReactNode | any;
+  icon: React.ReactNode;
   href: string;
 };
 
@@ -57,9 +57,9 @@ const FloatingdockCore = () => {
   return (
     <motion.div
       onMouseMove={(e: any) => mouseHandlerX.set(e.pageX)}
-      onMouseLeave={(e: any) => mouseHandlerX.set(Infinity)}
+      onMouseLeave={() => mouseHandlerX.set(Infinity)}
       className="fixed bottom-5 inset-x-0 mx-auto gap-9 flex justify-center items-center h-16 bg-neutral-700 rounded-xl w-fit px-4 bg-white/10 p-4 shadow-md shadow-white/10 backdrop-blur-2xl">
-      {links.map((el, idx) => (
+      {links.map((el) => (
         <IconContainer mouseHandlerX={mouseHandlerX} el={el} key={el.title} />
       ))}
     </motion.div>
