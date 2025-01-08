@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 
-import { useClickOutside } from "@/hooks/useClickOutside";
+// import { useClickOutside } from "@/hooks/useClickOutside";
 // // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // import { Button } from "@/components/ui/button";
 // import UserProfile from "./user-profile";

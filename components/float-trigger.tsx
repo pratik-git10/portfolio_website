@@ -56,7 +56,9 @@ const FloatingdockCore = () => {
 
   return (
     <motion.div
-      onMouseMove={(e: any) => mouseHandlerX.set(e.pageX)}
+      onMouseMove={(e: React.MouseEvent<HTMLDivElement>) =>
+        mouseHandlerX.set(e.pageX)
+      }
       onMouseLeave={() => mouseHandlerX.set(Infinity)}
       className="fixed bottom-5 inset-x-0 mx-auto gap-9 flex justify-center items-center h-16 bg-neutral-700 rounded-xl w-fit px-4 bg-white/10 p-4 shadow-md shadow-white/10 backdrop-blur-2xl">
       {links.map((el) => (
@@ -75,16 +77,20 @@ export const IconContainer = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const distance = useTransform(mouseHandlerX, (val) => {
-    let bounds = ref?.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+    const bounds = ref?.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
 
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
-  let widthIconTransform = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let heightIconTransform = useTransform(
+  const widthIconTransform = useTransform(
+    distance,
+    [-150, 0, 150],
+    [20, 40, 20]
+  );
+  const heightIconTransform = useTransform(
     distance,
     [-150, 0, 150],
     [20, 40, 20]

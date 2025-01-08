@@ -22,6 +22,8 @@ const ContactPage = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -57,21 +59,27 @@ const ContactPage = () => {
     return isValid;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (validateForm()) {
+      setIsSubmitting(true);
       try {
-        const response = axios.post(
-          "http://localhost:5000/api/contact",
-          formData
-        );
-
+        await axios.post("http://localhost:5000/api/contact", formData);
         toast.success("Form submitted successfully!");
         setFormData({ name: "", email: "", subject: "", message: "" });
-      } catch (error) {
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error) && error.response) {
+          const errorMessage =
+            (error.response.data as { message?: string }).message ||
+            "Unexpected error";
+          toast.error(`Failed to submit the form: ${errorMessage}`);
+        } else {
+          toast.error("An unexpected error occurred.");
+        }
         console.error("Error submitting form:", error);
-        toast.error("Failed to submit the form.");
+      } finally {
+        setIsSubmitting(false);
       }
     }
   };
@@ -160,8 +168,9 @@ const ContactPage = () => {
           </div>
           <Button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-            Submit
+            disabled={isSubmitting}
+            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 disabled:bg-blue-300">
+            {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
         </form>
       </div>
