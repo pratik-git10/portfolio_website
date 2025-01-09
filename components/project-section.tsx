@@ -22,11 +22,11 @@ const ProjectSectionNew = ({
     <div className="border shadow-inner shadow-slate-500 rounded-md mb-8 p-4 flex flex-col md:flex-row items-center md:items-stretch gap-4 md:gap-6 mx-3 md:mx-0">
       <div className="flex-1 flex flex-col md:items-start justify-center md:justify-start text-center md:text-left">
         <p className="text-sm sm:text-base flex">{description}</p>
-        <div className="mt-3">
+        <div className="mt-3 flex justify-center">
           <Link
             href={githublink}
             target="_blank"
-            className="p-2 bg-white text-black rounded-md mr-3 flex gap-1 items-center">
+            className="p-2 bg-white text-black rounded-md mr-3 flex gap-1 items-center justify-center w-fit">
             <IconBrandGithub stroke={1} size={20} />
             Source Code
           </Link>

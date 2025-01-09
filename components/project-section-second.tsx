@@ -33,11 +33,11 @@ const ProjectSectionNew = ({
       </Link>
       <div className="flex-1 flex flex-col md:items-end justify-center md:justify-start text-center md:text-left">
         <p className="text-sm sm:text-base flex">{description}</p>
-        <div className="mt-3">
+        <div className="mt-3 flex justify-center">
           <Link
             href={githublink}
             target="_blank"
-            className="text-black p-2 bg-white rounded-md mr-2 flex items-center gap-1  ">
+            className="text-black p-2 bg-white rounded-md mr-2 flex justify-center items-center w-fit">
             <IconBrandGithub stroke={1} size={20} />
             Source Code
           </Link>
