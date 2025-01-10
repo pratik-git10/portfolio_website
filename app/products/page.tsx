@@ -2,10 +2,16 @@ import ProjectSection from "@/components/project-section";
 import ProjectSectionNew from "@/components/project-section-second";
 import React from "react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
+
 const ProductPage = () => {
   return (
     <div>
-      <div className="mt-24 max-w-xl md:max-w-3xl mx-auto md:mx:auto mb-28">
+      <div className="mt-24 max-w-xl md:max-w-3xl mx-auto md:mx:auto mb-10">
         <ProjectSection
           description="This project is a clone of Miro, a renowned whiteboard platform. Its core functionalities include notetaking and diagram creation. The technology stack utilized comprises Next.js, Clerk authentication, Convex, Live blocks, all implemented with TypeScript."
           link="https://whiteboard-clone.vercel.app/"

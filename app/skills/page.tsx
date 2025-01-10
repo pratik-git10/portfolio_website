@@ -17,6 +17,12 @@ import {
 } from "@tabler/icons-react";
 import { Separator } from "@/components/ui/separator";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My Skills",
+};
+
 const ComponentsPage = () => {
   const icons = [
     { Icon: IconBrandHtml5, color: "text-orange-500", title: "HTML" },
@@ -43,7 +49,7 @@ const ComponentsPage = () => {
   ];
 
   return (
-    <div className="bg--500 flex flex-col justify-center items-center mt-24 max-w-3xl mx-auto mb-28">
+    <div className="bg--500 flex flex-col justify-center items-center mt-24 max-w-3xl mx-auto mb-10">
       <h1 className="font-bold text-xl bg--400 px-36 py-1 shadow-2xl shadow-slate-500 rounded-md">
         Skills
       </h1>
