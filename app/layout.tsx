@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Content from "@/components/content";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
