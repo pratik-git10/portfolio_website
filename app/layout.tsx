@@ -38,6 +38,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         {children}
+        <Analytics />
         <Content />
         <Footer />
         <Toaster position="top-center" />
