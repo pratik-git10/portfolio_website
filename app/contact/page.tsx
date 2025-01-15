@@ -65,9 +65,11 @@ const ContactPage = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       try {
-        await axios.post("http://localhost:5000/api/contact", formData);
-        toast.success("Form submitted successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        const response = await axios.post("/api/contact", formData);
+        if (response.status === 201) {
+          toast.success("Form submitted successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        }
       } catch (error: unknown) {
         if (axios.isAxiosError(error) && error.response) {
           const errorMessage =
@@ -77,7 +79,6 @@ const ContactPage = () => {
         } else {
           toast.error("An unexpected error occurred.");
         }
-        // console.error("Error submitting form:", error);
       } finally {
         setIsSubmitting(false);
       }
@@ -85,7 +86,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="mt-24 rounded-md mx-auto backdrop-blur-xl mb-10 max-w-xl ">
+    <div className="mt-24 rounded-md mx-auto backdrop-blur-xl mb-10 max-w-xl">
       <div className="flex flex-col justify-center items-center backdrop-blur-md bg-white/10 p-10 rounded-md mx-10 md:mx-20 shadow-sm shadow-gray-500">
         <h1 className="text-2xl">Contact Me</h1>
         <p className="text-muted-foreground">or you can reach me at</p>
