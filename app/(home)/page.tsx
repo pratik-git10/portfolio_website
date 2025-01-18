@@ -15,9 +15,7 @@ export default function Home() {
           over 1 years of experience developing a wide range of projects with
           varying levels of complexity. My eagerness to learn new things is only
           matched by my desire to advance alongside driven and ambitious
-          individuals. Through my work, I strive to craft digital experiences
-          that exceed user expectations, leaving a lasting impression of quality
-          and innovation.
+          individuals.
         </p>
       </div>
       <div className="mt-6 p-2">

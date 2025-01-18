@@ -35,15 +35,6 @@ const ProductPage = () => {
           image="/whiteboard_img.jpg"
           githublink="https://github.com/pratik-git10/whiteboard"
         />
-
-        <ProjectSectionNew
-          description="This is a Replicate Project of Google Docs. Which allows the users to create files based on there preferences. Many basic with advance functionality are crfeated for user like save the file in databse print in pdf format and many more"
-          link="/"
-          linkLabel="Google-Documents"
-          // image
-          image="/image"
-          githublink="https://github.com/pratik-git10/Docs_Clone"
-        />
       </div>
     </div>
   );
