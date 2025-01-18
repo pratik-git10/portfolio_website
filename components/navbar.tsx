@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Navlinks = [
-  { link: "/pratik_pund_resume_.pdf", img: "/resume.svg" },
+  { link: "/New_Resume.pdf", img: "/resume.svg" },
   { link: "https://github.com/pratik-git10", img: "/github.svg" },
   {
     link: "https://linkedin.com/in/pratik-pund-473168216",
