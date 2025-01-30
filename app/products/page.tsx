@@ -1,7 +1,5 @@
 import ProjectSection from "@/components/project-section";
-import ProjectSectionNew from "@/components/project-section-second";
 import React from "react";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
