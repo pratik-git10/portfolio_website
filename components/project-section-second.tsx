@@ -8,6 +8,7 @@ type Props = {
   link: string;
   linkLabel?: string; // Optional prop for the link label
   image: string;
+  title: string;
   githublink: string;
 };
 
@@ -15,13 +16,13 @@ const ProjectSectionNew = ({
   description,
   link,
   image,
-
+  title,
   githublink,
 }: Props) => {
   return (
     <div className="border shadow-inner shadow-slate-500 rounded-md mb-8 p-4 flex flex-col-reverse md:flex-row items-center md:items-stretch gap-4 md:gap-6 mx-3 md:mx-0">
       <Link href={link} target="_blank" className="flex-shrink-0">
-        <div className="rounded-md flex justify-center items-center">
+        <div className="rounded-md flex justify-center items-center hover:scale-105 transition-all">
           <Image
             alt="Project Preview"
             src={image}
@@ -32,6 +33,7 @@ const ProjectSectionNew = ({
         </div>
       </Link>
       <div className="flex-1 flex flex-col md:items-end justify-center md:justify-start text-center md:text-left">
+        <p className="font-bold text-lg text-neutral-400">{title}</p>
         <p className="text-sm sm:text-base flex">{description}</p>
         <div className="mt-3 flex justify-center">
           <Link

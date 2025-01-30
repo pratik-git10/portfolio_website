@@ -43,7 +43,7 @@ const Navbar = () => {
                 alt="image"
                 width={25}
                 height={25}
-                className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900"
+                className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition ease-in-out"
               />
             </Link>
           ))}
