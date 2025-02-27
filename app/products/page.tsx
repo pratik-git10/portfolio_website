@@ -15,7 +15,7 @@ const ProductPage = () => {
           title="InterviewAI"
           link="https://interviewai-nu.vercel.app/"
           linkLabel="InterviewAI"
-          image="/interviewai.png"
+          image="/new_interviewai.png"
           githublink="https://github.com/pratik-git10/InterviewAI"
         />
 
