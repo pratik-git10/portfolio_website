@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s - Portfolio",
   },
   description:
-    "This is my portfolio website. Where I shown my skills, projects, and about me.",
+    "This is my portfolio website, where I showcase my skills, projects, and information about me.",
   twitter: { card: "summary_large_image" },
 };
 

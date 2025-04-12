@@ -11,11 +11,10 @@ export default function Home() {
           Hi, I am Pratik Sanjayrao Pund
         </p>
         <p className="mx-5 pt-4 text-neutral-400 text-clip">
-          I am a proficient and passionate full stack software engineer with
-          over 1 years of experience developing a wide range of projects with
-          varying levels of complexity. My eagerness to learn new things is only
-          matched by my desire to advance alongside driven and ambitious
-          individuals.
+          I am a passionate full stack software engineer with over 1 year of
+          experience developing a wide range of projects with varying levels of
+          complexity. My eagerness to learn new things is only matched by my
+          desire to grow alongside driven and ambitious individuals.
         </p>
       </div>
       <div className="mt-6 p-2">
