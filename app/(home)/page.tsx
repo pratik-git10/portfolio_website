@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="mt-[88px] max-w-[500px] mx-auto px-4 mb-10">
       <div className="bg--800 bg--300 p-2 flex flex-col justify-start ">
-        <h1 className="flex justify-center items-center text-2xl font-semibold mb-5 w-fit mx-auto p-1 rounded-md shadow-sm shadow-black text-stone-400">
+        <h1 className="flex justify-center items-center text-2xl font-semibold mb-5 w-fit mx-auto p-1 rounded-md shadow-sm shadow-black">
           About Me
         </h1>
         <p className="font-semibold text-xl mx-5">

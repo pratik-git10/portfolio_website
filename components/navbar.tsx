@@ -27,12 +27,12 @@ const Navbar = () => {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 m-3">
-      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-md bg-white/10 p-4 backdrop-blur-2xl">
+      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-md bg-white/10 p-4 backdrop-blur-2xl ">
         {/* shadow-lg shadow-white/10  */}
         <Link href="/" className="text-xl font-semibold">
-          <span className="shadow-inner shadow-slate-600 p-1.5 rounded-md">
+          <h1 className="shadow-inner shadow-slate-600 p-1.5 rounded-md animate-spin   -rotate-12 transition transform ease-in-out">
             Pratik Pund
-          </span>
+          </h1>
         </Link>
 
         <div className="flex justify-center items-center gap-4 py-1.5  rounded-sm">
