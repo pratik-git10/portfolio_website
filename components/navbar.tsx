@@ -10,13 +10,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Navlinks = [
-  { link: "/New_Resume.pdf", img: "/resume.svg" },
+  { link: "/pratik_pund_resume.pdf", img: "/resume.svg" },
   { link: "https://github.com/pratik-git10", img: "/github.svg" },
   {
     link: "https://linkedin.com/in/pratik-pund-473168216",
     img: "/linkedin.svg",
   },
-  { link: "/", img: "/leetcode.svg" },
+  // { link: "/", img: "/leetcode.svg" },
 ];
 
 const Navbar = () => {
