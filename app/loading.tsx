@@ -1,6 +1,6 @@
 import LoaderComponent from "@/components/loader";
 
-const Loader = () => {
+const Loading = () => {
   return (
     <div className="flex justify-end items-center my-4 mx-4">
       <LoaderComponent />
@@ -8,4 +8,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default Loading;
