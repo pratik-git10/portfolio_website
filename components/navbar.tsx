@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Navlinks = [
-  { link: "/pratik_pund_resume.pdf", img: "/resume.svg" },
+  { link: "/pratikpund_resume.pdf", img: "/resume.svg" },
   { link: "https://github.com/pratik-git10", img: "/github.svg" },
   {
     link: "https://linkedin.com/in/pratik-pund-473168216",
@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-md bg-white/10 p-4 backdrop-blur-2xl ">
         {/* shadow-lg shadow-white/10  */}
         <Link href="/" className="text-xl font-semibold">
-          <h1 className="shadow-inner shadow-slate-600 p-1.5 rounded-md -rotate-12 hover:rotate-0  ease-in-out duration-300">
+          <h1 className="shadow-inner shadow-slate-600 p-1.5 rounded-md -rotate-12 hover:rotate-0 ease-in-out duration-300 text-amber-200">
             Pratik Pund
           </h1>
         </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 alt="image"
                 width={25}
                 height={25}
-                className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition ease-in-out"
+                className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition ease-in-out duration-300"
               />
             </Link>
           ))}
