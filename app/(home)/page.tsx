@@ -30,7 +30,7 @@ export default function Home() {
       <div className="p-2 mt-4 flex items-center">
         <Link
           href="/products"
-          className="mx-5 py-1 px-2 bg-white rounded-md text-black shadow-sm shadow-black">
+          className="mx-5 py-1 px-2 bg-white rounded-md text-black shadow-sm shadow-black hover:scale-105 transition-all duration-300 ">
           Projects
         </Link>
       </div>

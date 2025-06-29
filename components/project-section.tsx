@@ -29,7 +29,7 @@ const ProjectSectionNew = ({
           <Link
             href={githublink}
             target="_blank"
-            className={`p-2 bg-white text-black rounded-md mr-3 flex gap-1 items-center justify-center w-fit`}>
+            className={`p-2 bg-white text-black rounded-md mr-3 flex gap-1 items-center justify-center w-fit hover:scale-105 transition-all duration-300`}>
             <IconBrandGithub stroke={1} size={20} />
             Source Code
           </Link>
