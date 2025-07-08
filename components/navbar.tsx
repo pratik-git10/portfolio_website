@@ -37,7 +37,11 @@ const Navbar = () => {
 
         <div className="flex justify-center items-center gap-4 py-1.5  rounded-sm">
           {Navlinks.map((navlink, index) => (
-            <Link href={navlink.link} target="_blank" key={index}>
+            <Link
+              href={navlink.link}
+              target="_blank"
+              key={index}
+              rel="noopener noreferrer">
               <Image
                 src={navlink.img}
                 alt="image"
