@@ -1,79 +1,90 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
-// import { useState } from "react";
-
-// import { useClickOutside } from "@/hooks/useClickOutside";
-// // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-// import { Button } from "@/components/ui/button";
-// import UserProfile from "./user-profile";
 import Image from "next/image";
 
-const Navlinks = [
-  { link: "/pratikpund_resume.pdf", img: "/resume.svg" },
-  { link: "https://github.com/pratik-git10", img: "/github.svg" },
+const NAVLINKS = [
+  { link: "/pratikpund_resume.pdf", img: "/resume.svg", external: true },
+  {
+    link: "https://github.com/pratik-git10",
+    img: "/github.svg",
+    external: true,
+  },
   {
     link: "https://linkedin.com/in/pratik-pund-473168216",
     img: "/linkedin.svg",
+    external: true,
   },
-  // { link: "/", img: "/leetcode.svg" },
 ];
 
-const Navbar = () => {
-  // const [showUserProfile, setShowUserProfile] = useState(false);
-  // const profileRef = useClickOutside<HTMLDivElement>(() =>
-  //   setShowUserProfile(false)
-  // );
+export default function Navbar() {
+  const [hidden, setHidden] = useState(false);
+  const [lastScroll, setLastScroll] = useState(0);
+
+  // Hide / Show on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const current = window.scrollY;
+
+      if (current > lastScroll && current > 80) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+
+      setLastScroll(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScroll]);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 m-3">
-      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-md bg-white/10 p-4 backdrop-blur-2xl ">
-        {/* shadow-lg shadow-white/10  */}
+    <nav
+      className={`
+        fixed inset-x-0 top-0 z-50 transition-transform duration-300 px-2
+        ${hidden ? "-translate-y-20" : "translate-y-0"}
+      `}>
+      <div className="mx-auto m-3 flex h-14 max-w-4xl items-center justify-between rounded-md bg-white/10 p-4 backdrop-blur-2xl shadow-lg shadow-white/5">
+        {/* Brand */}
         <Link href="/" className="text-xl font-semibold">
           <h1 className="shadow-inner shadow-slate-600 p-1.5 rounded-md -rotate-12 hover:rotate-0 ease-in-out duration-300 text-amber-200">
             Pratik Pund
           </h1>
         </Link>
 
-        <div className="flex justify-center items-center gap-4 py-1.5  rounded-sm">
-          {Navlinks.map((navlink, index) => (
-            <Link
-              href={navlink.link}
-              target="_blank"
-              key={index}
-              rel="noopener noreferrer">
-              <Image
-                src={navlink.img}
-                alt="image"
-                width={25}
-                height={25}
-                className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition ease-in-out duration-300"
-              />
-            </Link>
-          ))}
+        {/* Nav Icons */}
+        <div className="flex items-center gap-4">
+          {NAVLINKS.map((item, idx) =>
+            item.external ? (
+              <a
+                key={idx}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer">
+                <Image
+                  src={item.img}
+                  alt="icon"
+                  width={25}
+                  height={25}
+                  className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition"
+                />
+              </a>
+            ) : (
+              <Link key={idx} href={item.link}>
+                <Image
+                  src={item.img}
+                  alt="icon"
+                  width={25}
+                  height={25}
+                  className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition"
+                />
+              </Link>
+            )
+          )}
         </div>
-
-        {/* <Button
-          variant="ghost"
-          size="icon"
-          className="rounded-full p-0"
-          onClick={() => setShowUserProfile(!showUserProfile)}>
-          <Avatar className="">
-            <AvatarImage src="/" alt="Pratik Pund" />
-            <AvatarFallback className="bg-neutral-300">PP</AvatarFallback>
-          </Avatar>
-        </Button> */}
-
-        {/* showUserProfile && 
-          <div
-            ref={profileRef}
-            className="absolute top-[84px] right-4 rounded-lg border bg-black p-4 transition-transform duration-300 transform scale-100">
-            //  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center rounded-lg border bg-black p-4 transition-transform duration-300 scale-100 
-            <UserProfile />
-          </div> */}
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

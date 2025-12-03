@@ -35,7 +35,7 @@ const FloatingdockCore = () => {
       href: "/",
     },
     {
-      title: "Products",
+      title: "Projects",
       icon: <FolderOpenDot className="h-full w-full text-black" />,
       href: "/products",
     },
