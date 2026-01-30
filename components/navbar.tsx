@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAVLINKS = [
-  { link: "/pratikpund_resume.pdf", img: "/resume.svg", external: true },
+  { link: "/pratik_pund_resume.pdf", img: "/resume.svg", external: true },
   {
     link: "https://github.com/pratik-git10",
     img: "/github.svg",
@@ -81,7 +81,7 @@ export default function Navbar() {
                   className="bg-white rounded-md p-0.5 shadow-md shadow-gray-900 hover:scale-125 transition"
                 />
               </Link>
-            )
+            ),
           )}
         </div>
       </div>
