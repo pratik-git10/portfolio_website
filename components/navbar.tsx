@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAVLINKS = [
-  { link: "/pratik_pund_resume.pdf", img: "/resume.svg", external: true },
+  { link: "/pratikpund_resume.pdf", img: "/resume.svg", external: true },
   {
     link: "https://github.com/pratik-git10",
     img: "/github.svg",

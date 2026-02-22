@@ -11,30 +11,30 @@ const ProductPage = () => {
     <div>
       <div className="mt-24 max-w-xl md:max-w-3xl mx-auto md:mx:auto mb-10">
         <ProjectSection
-          description="It is a Website where users can give mock Interview. All Interviews are AI generated, where you can record answers and after final submissions you will get feedback on your Interview. It is very helpful for practice."
-          title="InterviewAI"
-          link="https://interviewai-nu.vercel.app/"
-          linkLabel="InterviewAI"
-          image="/new_interviewai.png"
-          githublink="https://github.com/pratik-git10/InterviewAI"
+          description="A real-time chat application built using WebSockets that enables instant messaging between users. The platform supports live message updates without page refresh, user presence detection, and smooth two-way communication. Designed for fast, scalable, and low-latency interaction."
+          title="Chatter"
+          link="https://chatter-app-gamma.vercel.app"
+          linkLabel="Chatter"
+          image="/chatter.png"
+          githublink="https://github.com/pratik-git10/chatter-realtime-chat-app"
         />
 
         <ProjectSection
-          title="Zoom-CLone"
-          description="This project is a replicate of Zoom website. Its core functionalities include user login, admin dashboard, creating personal meeting room, sharing room id. Also you can view recording. The technology stack utilized comprises Next.js, next authentication all implemented with TypeScript."
-          link="https://zoom-clone-three-fawn.vercel.app/"
-          linkLabel="Zoom"
-          image="/zoom_img.jpg"
-          githublink="https://github.com/pratik-git10/zoom-clone"
+          title="Trackcue"
+          description="A smart reminder web application that helps users track upcoming product expiration dates. Users can add products with expiry details and receive timely alerts before items expire. The system helps reduce waste and ensures better inventory management through automated notifications."
+          link="https://www.trackcue.site"
+          linkLabel="Trackcue"
+          image="/trackcue.png"
+          githublink="https://github.com/pratik-git10/trackcue"
         />
 
         <ProjectSection
-          title="Whiteboard"
-          description="This project is a clone of Miro, a renowned whiteboard platform. Its core functionalities include notetaking and diagram creation. The technology stack utilized comprises Next.js, Clerk authentication, Convex, Live blocks, all implemented with TypeScript."
-          link="https://whiteboard-clone.vercel.app/"
-          linkLabel="Whiteboard"
-          image="/whiteboard_img.jpg"
-          githublink="https://github.com/pratik-git10/whiteboard"
+          title="ThumbnailAI"
+          description="An AI-based web application that generates eye-catching YouTube thumbnails from user input. Users can enter a topic or title, and the system creates engaging, high-quality thumbnail designs automatically. Built to help content creators save time and improve click-through rates with visually optimized thumbnails."
+          link="https://yt-thumbnail-jade.vercel.app"
+          linkLabel="YTthumbnailAI"
+          image="/thumbnail.png"
+          githublink="https://github.com/pratik-git10/YT_Thumbnail"
         />
       </div>
     </div>
