@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const UserProfile = () => {
   const handleResumeClick = () => {
-    const resumePath = "./pratik_pund_resume_.pdf";
+    const resumePath = "./pratikpund_resume.pdf";
 
     const link = document.createElement("a");
     link.href = resumePath;
